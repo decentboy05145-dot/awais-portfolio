@@ -14,21 +14,35 @@ body {
 
 /* ---------- Header & Navigation ---------- */
 #header {
+    
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background: url(./pic.png);
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: right center;
+    background-position:  right 80px !important;
+    
 }
 .container {
-    padding: 10px 10%;
+padding: 10px 10%;
+
 }
+
+
+/* padding: 10px 10%;mar */
+
+
+
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    position: absolute;
+    padding: 18px 18px;
+    top: 0;
+    width: 88%;
+    z-index: 10;
 }
 .logo {
     width: 140px;
@@ -220,16 +234,19 @@ nav ul li a:hover::after {
     margin-bottom: 20px;
 }
 .layer a {
-    margin-top: 20px;
+    /* margin-top: 20px; */
     color: #ff004f;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 35px;
     line-height: 60px;
     background: #fff;
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    text-align: center;
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .work:hover img {
     transform: scale(1.1);
@@ -266,9 +283,11 @@ nav ul li a:hover::after {
 /* ---------- Contact Section ---------- */
 .contact-left {
     flex-basis: 35%;
+    padding-left: 35px;
 }
 .contact-right {
     flex-basis: 60%;
+    padding-right: 35px;
 }
 .contact-left p {
     margin-top: 30px;
@@ -276,7 +295,7 @@ nav ul li a:hover::after {
 .contact-left p i {
     color: #ff004f;
     margin-right: 15px;
-    font-size: 25px;
+    font-size: 15px;
 }
 .social-icons {
     margin-top: 30px;
@@ -284,7 +303,7 @@ nav ul li a:hover::after {
 .social-icons a {
     text-decoration: none;
     font-size: 30px;
-    margin-right: 15px;
+    margin-right: 25px;
     color: #ababab;
     display: inline-block;
     transition: transform 0.5s, color 0.5s;
@@ -317,6 +336,7 @@ form input, form textarea {
 }
 
 /* ---------- CSS for Mobile & Tablets ---------- */
+
 nav .fas {
     display: none;
 }
@@ -326,17 +346,18 @@ nav .fas {
         padding: 10px 5%;
     }
     #header {
-        background-image: url(./pic.png);
+        background-image: none;
         background-size: cover;
         background-position: 30% center;
         height: 70vh;
     }
     .header-text {
-        margin-top: 45%;
+        margin-top: 65%;
         font-size: 20px;
     }
     .header-text h1 {
         font-size: 40px;
+        white-space: nowrap;
     }
     nav .fas {
         display: block;
@@ -369,6 +390,9 @@ nav .fas {
         cursor: pointer;
         font-size: 22px;
     }
+    
+
+    
     
     /* Responsive layout rows */
     .about-col-1, .about-col-2, .contact-left, .contact-right {
